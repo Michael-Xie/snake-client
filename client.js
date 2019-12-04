@@ -10,12 +10,19 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
-  conn.on('data', (data) => {
-    console.log(data);
-  });
   conn.on('connect', () => {
     console.log('Succesfully connected to game server');
-    conn.write('Name: MKX');
+
+  });
+  conn.write('Name: MKX');
+
+  setInterval(() => {
+    // conn.write('Move: up');
+
+  }, 50)
+
+  conn.on('data', (data) => {
+    console.log(data);
   });
 
 
