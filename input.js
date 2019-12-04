@@ -13,6 +13,12 @@ function handleUserInput(data) {
     connection.write('Move: down');
   } else if (data === 'd') {
     connection.write('Move: right');
+  } else if (data === 'j') {
+    connection.write('Say: How ya doing?');
+  } else if (data === 'k') {
+    connection.write('Say: Cool beans~~');
+  } else if (data == 'l') {
+    connection.write('Say: Nein nein!');
   }
 }
 /**
